@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration System</h1>
+
+        <div id="message"></div>
+
+        <form id="studentForm">
+
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter student name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Enter age"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+                <input
+                    type="text"
+                    id="course"
+                    placeholder="Enter course"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="register-btn">
+                Register Student
+            </button>
+
+            <button
+                type="reset"
+                class="reset-btn"
+            >
+                Clear Form
+            </button>
+
+        </form>
+
+        <div class="toolbar">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name or course..."
+            >
+
+            <button
+                onclick="sortStudents()"
+                class="sort-btn"
+            >
+                Sort By Name
+            </button>
+
+        </div>
+
+        <div class="stats">
+            <p id="studentCount">
+                Total Students: 0
+            </p>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Registered On</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

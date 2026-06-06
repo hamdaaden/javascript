@@ -1,0 +1,208 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Message Box */
+
+#message {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    min-height: 25px;
+}
+
+/* Form */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+}
+
+/* Buttons */
+
+.register-btn,
+.reset-btn,
+.sort-btn,
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.register-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.register-btn:hover {
+    background: #219150;
+}
+
+.reset-btn {
+    background: #e67e22;
+    color: white;
+}
+
+.reset-btn:hover {
+    background: #ca6a14;
+}
+
+.sort-btn {
+    background: #3498db;
+    color: white;
+    height: 45px;
+}
+
+.sort-btn:hover {
+    background: #217dbb;
+}
+
+/* Toolbar */
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    flex: 1;
+}
+
+/* Stats */
+
+.stats {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #3498db;
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tbody tr:hover {
+    background: #eef6ff;
+}
+
+/* Action Buttons */
+
+.edit-btn {
+    background: #f1c40f;
+    color: black;
+    margin-right: 5px;
+}
+
+.edit-btn:hover {
+    background: #d4ac0d;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .sort-btn {
+        width: 100%;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
